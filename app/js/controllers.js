@@ -4,9 +4,10 @@
  *
  * Distributed under terms of the MIT license.
  */
-var app = angular.module('myApp', []);
+//var app = angular.module('myApp', []);
 console.log("a");
-app.controller('nSCtrl',['webServices','$scope',function(webServices,$scope){
+/*
+angular.module('myApp').controller('nSCtrl',['webServices','$scope',function(webServices,$scope){
         webServices.getnewStories().then(function(response){
             $scope.items = response; //Assign data received to $scope.data
     console.log("b");

@@ -4,6 +4,7 @@
  *
  * Distributed under terms of the MIT license.
  */
+/*
 var myApp = angular.module('myApp', []);
 //a factory to consume webservices and return data to controllers.
     myApp.factory('webServices',['$http',function($http){
@@ -15,3 +16,4 @@ var myApp = angular.module('myApp', []);
             }
         }
     }]);
+*/
