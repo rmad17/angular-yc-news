@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
   <!-- In production use:
@@ -33,29 +34,14 @@
 <body>
     <div ng-include="'./partials/header.html'"></div>
     <div class="container">
-  <ul class="menu btn-group">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  <div ng-include="'./view1/view1.html'"></div>
+  <div ng-include="'./view2/view2.html'"></div>
 
- <div  ng-controller = "nsCtrl">
-     <table>
-        <tr>
-           <th>Story id</th>
-        </tr>
-     
-        <tr ng-repeat = "item in items">
-           <td>{{ item }}</td>
-        </tr>
-     </table>
-  </div> 
-    
   <div>Angular seed app: v<span app-version></span></div>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">

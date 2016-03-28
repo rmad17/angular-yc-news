@@ -13,7 +13,24 @@ config(['$routeProvider', function($routeProvider) {
 }]);
 */
 (function(){
-    angular.module('myApp',['ui.bootstrap'])
+    angular.module('myApp',[
+    'ui.bootstrap',
+    'myApp.view1',
+    'myApp.view2',
+    'myApp.version']).
+
+    config(['$routeProvider', function($routeProvider) {
+      $routeProvider.
+        when('/view1', {
+            templateUrl: 'view1.html',
+            controller: "View1Ctrl"
+        }).
+        when('/view2', {
+            templateUrl: 'view2.html',
+            controller: "View2Ctrl"
+        }).
+        otherwise({redirectTo: '/view1'});
+    }])
     //afactory to consume webservices and return data to controllers.
     .factory('webServices',['$http',function($http){
         return {
@@ -30,6 +47,5 @@ config(['$routeProvider', function($routeProvider) {
             $scope.items = response; //Assign data received to $scope.data
         });
     }])
-
 
 })();
