@@ -13,8 +13,7 @@ config(['$routeProvider', function($routeProvider) {
 }]);
 */
 (function(){
-    angular.module('myApp',[])
-
+    angular.module('myApp',['ui.bootstrap'])
     //afactory to consume webservices and return data to controllers.
     .factory('webServices',['$http',function($http){
         return {
