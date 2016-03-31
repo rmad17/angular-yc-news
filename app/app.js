@@ -47,5 +47,20 @@ config(['$routeProvider', function($routeProvider) {
             $scope.items = response; //Assign data received to $scope.data
         });
     }])
+    .factory('story',['$http',function($http){
+        return {
+            getStory : function(){
+                return  $http.get('https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty').then(function(response){ //wrap it inside another promise using then
+                            return response.data;  //only return friends
+                        });
+            }
+        }
+    }])
+    //define controller and inject webServices service as dependency.
+    .controller('nsStory',['story','$scope',function(story,$scope){
+        story.getStory().then(function(response){
+            $scope.stobject = response; //Assign data received to $scope.data
+        });
+    }]);
 
 })();

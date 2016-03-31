@@ -39,8 +39,18 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-include="'./view1/view1.html'"></div>
-  <div ng-include="'./view2/view2.html'"></div>
+  <div  ng-controller = "nsCtrl">
+   <table>
+      <tr>
+         <th>Story id</th>
+      </tr>
+   
+      <tr ng-repeat = "item in items|limitTo:20">
+         <td>{{ item }} <div ng-include="'./view1/view1.html'"></div> </td>
+      </tr>
+   </table>
+  </div> 
+  <!--<div ng-include="'./view2/view2.html'"></div>-->
 
   <div>Angular seed app: v<span app-version></span></div>
   <!-- Latest compiled and minified CSS -->
