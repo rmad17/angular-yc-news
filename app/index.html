@@ -42,15 +42,17 @@
   <div  ng-controller = "nsCtrl">
    <table>
       <tr>
-         <th>Story id</th>
+         <th>New Stories </th>
       </tr>
    
       <tr ng-repeat = "item in items|limitTo:20">
-         <td>{{ item }} <div ng-include="'./view1/view1.html'"></div> </td>
+         <td> <div ng-include="'./view1/view1.html'"></div> </td>
       </tr>
    </table>
   </div> 
-  <!--<div ng-include="'./view2/view2.html'"></div>-->
+
+  <h3> Top Stories </h3>
+  <div ng-include="'./view2/view2.html'"></div>
 
   <div>Angular seed app: v<span app-version></span></div>
   <!-- Latest compiled and minified CSS -->

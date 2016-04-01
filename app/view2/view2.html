@@ -1,5 +1,11 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div  ng-controller = "tsCtrl">
+ <table>
+    <tr>
+       <th>Top Stories </th>
+    </tr>
+ 
+    <tr ng-repeat = "tsitem in tsitems|limitTo:20">
+       <td> {{ tsitem }} </td>
+    </tr>
+ </table>
+</div> 
