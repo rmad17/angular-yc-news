@@ -13,6 +13,7 @@ config(['$routeProvider', function($routeProvider) {
 }]);
 */
 (function(){
+    var test;
     angular.module('myApp',[
     'ui.bootstrap',
     'myApp.view1',
@@ -79,15 +80,14 @@ config(['$routeProvider', function($routeProvider) {
                                 var u2 = id.toString();
                                 var u3 = '.json?print=pretty';
                                 var url = u1 + u2 + u3;
-                                return  $http.get(url).
-                                                    then(function(response) { //wrap it inside another promise using then
-                                                    return response.data;  //only return friends
+                                return  $http.get(url).then(function(response) { //wrap it inside another promise using then
+                                        tsList.push(response.data);
+                                        return response.data;  //only return friends
                                 });
                             };
                             for(var i = 0; i < 20; i++){
-                                tsList.push(getStoryDetails(ids[i]));
+                                getStoryDetails(ids[i]);
                             }
-                            debugger;
                             return tsList;
                 });
         }}}])
