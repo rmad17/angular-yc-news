@@ -22,9 +22,9 @@
   <script src="../bower_components/angular-route/angular-route.js"></script>
   <script src="../bower_components/angular-resource/angular-resource.js"></script>
   <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
   <script src="app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/factories.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
@@ -39,18 +39,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div  ng-controller = "nsCtrl">
-   <table>
-      <tr>
-         <th>New Stories </th>
-      </tr>
-   
-      <tr ng-repeat = "item in items|limitTo:20">
-         <td> <div ng-include="'./view1/view1.html'"></div> </td>
-      </tr>
-   </table>
-  </div> 
-
+  <div ng-include="'./view1/view1.html'"></div>
   <h3> Top Stories </h3>
   <div ng-include="'./view2/view2.html'"></div>
 

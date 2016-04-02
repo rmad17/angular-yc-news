@@ -1,16 +1,11 @@
-<!--
 <div  ng-controller = "nsCtrl">
  <table>
     <tr>
-       <th>Story id</th>
+       <th>New Stories </th>
     </tr>
  
-    <tr ng-repeat = "item in items">
-       <td>{{ item }}</td>
+    <tr ng-repeat = "nsitem in nsitems">
+       <td> <a href="{{ nsitem.url }}"> {{ nsitem.title }}</a> </td>
     </tr>
  </table>
 </div> 
--->
-<div ng-controller = "nsStory" ng-model = "item">
-  <a href="{{ stobject.url }}"> {{ stobject.title }} </a>
-</div>
