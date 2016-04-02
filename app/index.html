@@ -38,11 +38,12 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+<div class="container-fluid">
+  <div class="col-md-10" ng-include="'./view1/view1.html'"></div>
+  <div class="col-md-10" ng-include="'./view2/view2.html'"></div>
+</div>
 
-  <div ng-include="'./view1/view1.html'"></div>
-  <div ng-include="'./view2/view2.html'"></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
+  <!--<div>Angular seed app: v<span app-version></span></div>-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </body>

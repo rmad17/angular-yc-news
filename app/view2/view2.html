@@ -1,10 +1,7 @@
 <div  ng-controller = "tsCtrl">
- <table>
-    <tr>
-       <th>Top Stories </th>
-    </tr>
- 
-    <tr ng-repeat = "tsitem in tsitems">
+ <h3> Top Stories </h3>
+ <table class="table">
+    <tr class="table-striped" ng-repeat = "tsitem in tsitems">
        <td> <a href="{{ tsitem.url }}"> {{ tsitem.title }}</a> </td>
     </tr>
  </table>
